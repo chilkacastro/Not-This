@@ -10,4 +10,6 @@ comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Toby\ wants\ to\ do.\ This\ metho
 comment3.params=
 comment3.target=void\ keyDown()
 comment3.text=\r\n\ this\ method\ is\ controlling\ the\ direction\ of\ Toby\r\n
-numComments=4
+comment4.params=
+comment4.target=void\ counter()
+numComments=5

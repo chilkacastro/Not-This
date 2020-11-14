@@ -27,10 +27,12 @@ public class MyWorld extends World
     private void prepare()
     {
         Toby toby = new Toby();
-        addObject(toby,405,471);
+        addObject(toby,468,494);
         toby.setLocation(553,365);
         toby.setLocation(556,394);
         toby.setLocation(404,462);
         toby.setLocation(504,476);
+        toby.setLocation(473,450);
+
     }
 }

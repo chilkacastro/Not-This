@@ -10,15 +10,13 @@ public class Toby extends Actor
 {
     private GreenfootImage image1 = null;
     private GreenfootImage image2 = null;
-    //private GreenfootImage image3 = null;
     private GreenfootImage image4 = null;
     private GreenfootImage image5 = null;
     private GreenfootImage image6 = null;
     private GreenfootImage image7 = null;
-    //private GreenfootImage image8 = null;
     private GreenfootImage image9 = null;
     private GreenfootImage image10 = null;
-    //private GreenfootImage image11 = null;
+    private int counter=0;
 
 
 /**
@@ -26,17 +24,14 @@ public class Toby extends Actor
  */  
 public Toby()
 {
-image1 =  new  GreenfootImage("dogside.png");
-image2 =  new  GreenfootImage("dogside2.png");
-//image3 =  new  GreenfootImage("dogside3.png");
-image4 =  new  GreenfootImage("dogsideleft.png");
-image5 =  new  GreenfootImage("dogsideleft2.png");
-image6 =  new  GreenfootImage("dogback.png");
-image7 =  new  GreenfootImage("dogback2.png");
-//image8 =  new  GreenfootImage("dogback3.png");
-image9 =  new  GreenfootImage("dogfront.png");
-image10 =  new  GreenfootImage("dogfront2.png");
-//image11 =  new  GreenfootImage("dogfront3.png");
+image1 =  new  GreenfootImage("Right1.png");
+image2 =  new  GreenfootImage("Right2.png");
+image4 =  new  GreenfootImage("Left1.png");
+image5 =  new  GreenfootImage("Left2.png");
+image6 =  new  GreenfootImage("Back1.png");
+image7 =  new  GreenfootImage("Back2.png");
+image9 =  new  GreenfootImage("Front1.png");
+image10 =  new  GreenfootImage("Front2.png");
 
 
 }
@@ -47,6 +42,7 @@ image10 =  new  GreenfootImage("dogfront2.png");
 public void act() 
 {
  keyDown();
+ counter();
 } 
 /**
  * this method is controlling the direction of Toby
@@ -54,7 +50,7 @@ public void act()
  public void keyDown()
  {
      if (Greenfoot.isKeyDown("up")) {
-            setLocation(getX(), getY() - 5);
+            setLocation(getX(), getY() - 8);
         if (getImage() == image6) {
                 setImage(image7);
             }
@@ -63,7 +59,7 @@ public void act()
             }
         }
      if (Greenfoot.isKeyDown("down")) {
-            setLocation(getX(), getY() + 5);
+            setLocation(getX(), getY() + 8);
         if (getImage() == image9) {
                 setImage(image10);
             }
@@ -72,7 +68,7 @@ public void act()
             }
         }
      if (Greenfoot.isKeyDown("right")) {
-            setLocation(getX() + 4, getY());
+            setLocation(getX() + 8, getY());
         if (getImage() == image1) {
                 setImage(image2);
             }
@@ -82,7 +78,7 @@ public void act()
      }
         
     if (Greenfoot.isKeyDown("left")) {
-        setLocation(getX() - 4, getY());
+        setLocation(getX() - 8, getY());
         if (getImage() == image4) {
                 setImage(image5);
             }
@@ -91,6 +87,14 @@ public void act()
             }
         }
     }
-
+ public void counter(){
+    if (counter==100){
+    keyDown();
+    counter=0;
+    }
+    else {
+    counter= counter+1;
+    }
+    }
    
 }
