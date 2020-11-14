@@ -37,13 +37,16 @@ image4 =  new  GreenfootImage(".png");
         }
         if (Greenfoot.isKeyDown("right")) {
             setLocation(getX() + 4, getY());
-            if (getImage() == image1) {
-                setImage(image2);
-            }
+             if (getImage() == image1) {
+            setImage(image2);
         }
-        else {
+        else if (getImage() == image2) {
+            setImage(image3);
+        }
+        else if (getImage() == image3) {
             setImage(image1);
         }
+        
         if (Greenfoot.isKeyDown("left")) {
             setLocation(getX() - 4, getY());
             if (getImage() == image3) {

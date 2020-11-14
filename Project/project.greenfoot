@@ -2,8 +2,8 @@
 class.MyWorld.image=road2.png
 editor.fx.0.height=739
 editor.fx.0.width=816
-editor.fx.0.x=270
-editor.fx.0.y=166
+editor.fx.0.x=567
+editor.fx.0.y=0
 height=28
 package.numDependencies=0
 package.numTargets=2
