@@ -16,6 +16,8 @@ public class Level2 extends MyWorld
     public Level2()
     {
         prepare();
+        showScore();
+        
     }
 
     /**
@@ -123,5 +125,22 @@ public class Level2 extends MyWorld
         Toby toby = new Toby();
         addObject(toby,792,623);
         removeObject(toby);
+        train34.setLocation(1199,94);
+        removeObject(train34);
+        removeObject(train35);
+        removeObject(train);
+        train32.setLocation(461,257);
+        removeObject(train32);
+        train36.setLocation(982,323);
+        removeObject(train36);
+        removeObject(train22);
+        removeObject(train2);
+        removeObject(train33);
+        removeObject(train3);
+        removeObject(train4);
     }
+ 
+        
+        
+    
 }

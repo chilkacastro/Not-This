@@ -21,7 +21,8 @@ public class Hole2 extends Actor
         if(isTouching(Toby.class)) {
             removeTouching(Toby.class);
             // put sound here -> dog cry
-            getWorld().showText("You lose a life!",360, 370);
+            //getWorld().showText("You lose a life!",360, 370);
+            // do addObject here
             
         }
     }
