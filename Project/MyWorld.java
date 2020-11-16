@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     private int points = 1000;
+    private int trials =3;
 
     /**
      * Constructor for objects of class MyWorld.
