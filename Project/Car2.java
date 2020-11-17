@@ -21,6 +21,7 @@
                 move(-1);
         
             } 
+<<<<<<< HEAD
             relocateToby();
        }
       
@@ -49,3 +50,16 @@
       
 
     }
+=======
+            if(isTouching(Toby.class))
+            {
+                Greenfoot.playSound("tireSkid.wav");
+            }
+        }
+      public void removeToby() {
+            if(isTouching(Toby.class)) {
+                removeTouching(Toby.class);
+            }
+        }
+}
+>>>>>>> fa259666448617f51ce5e4e13c00decf0d4f6727

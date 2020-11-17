@@ -37,8 +37,51 @@ dependency14.type=UsesDependency
 dependency15.from=TrafficCone
 dependency15.to=Toby
 dependency15.type=UsesDependency
+<<<<<<< HEAD
 dependency16.from=Truck1
 dependency16.to=MyWorld
+=======
+<<<<<<< HEAD
+dependency16.from=Train3
+dependency16.to=Toby
+dependency16.type=UsesDependency
+dependency17.from=Car2
+dependency17.to=Toby
+dependency17.type=UsesDependency
+dependency18.from=Train2
+dependency18.to=Toby
+dependency18.type=UsesDependency
+dependency19.from=Car
+dependency19.to=Toby
+dependency19.type=UsesDependency
+dependency2.from=Level2
+dependency2.to=Train2
+dependency2.type=UsesDependency
+dependency20.from=Toby
+dependency20.to=MyWorld
+dependency20.type=UsesDependency
+dependency21.from=Toby
+dependency21.to=TrafficCone
+dependency21.type=UsesDependency
+dependency22.from=Cactus
+dependency22.to=MyWorld
+dependency22.type=UsesDependency
+dependency23.from=Cactus
+dependency23.to=Toby
+dependency23.type=UsesDependency
+dependency24.from=Hole2
+dependency24.to=Toby
+dependency24.type=UsesDependency
+dependency25.from=Hole1
+dependency25.to=Toby
+dependency25.type=UsesDependency
+dependency26.from=Train
+dependency26.to=Toby
+dependency26.type=UsesDependency
+=======
+dependency16.from=Toby
+dependency16.to=Car
+>>>>>>> fa259666448617f51ce5e4e13c00decf0d4f6727
 dependency16.type=UsesDependency
 dependency17.from=Truck1
 dependency17.to=Toby
@@ -52,6 +95,7 @@ dependency19.type=UsesDependency
 dependency2.from=Level2
 dependency2.to=Train2
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency20.from=Truck2
 dependency20.to=Toby
 dependency20.type=UsesDependency
@@ -82,6 +126,9 @@ dependency28.type=UsesDependency
 dependency29.from=Hole2
 dependency29.to=Toby
 dependency29.type=UsesDependency
+=======
+>>>>>>> c5079198475d03045fba86a963ae1faf42000582
+>>>>>>> fa259666448617f51ce5e4e13c00decf0d4f6727
 dependency3.from=Level2
 dependency3.to=Train
 dependency3.type=UsesDependency
@@ -112,6 +159,7 @@ dependency8.type=UsesDependency
 dependency9.from=Level1
 dependency9.to=Hole1
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=1056
 editor.fx.0.width=1936
 editor.fx.0.x=-8
@@ -119,6 +167,24 @@ editor.fx.0.y=-8
 height=1056
 package.numDependencies=32
 package.numTargets=26
+=======
+<<<<<<< HEAD
+editor.fx.0.height=744
+editor.fx.0.width=1382
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+height=28
+package.numDependencies=26
+=======
+editor.fx.0.height=735
+editor.fx.0.width=816
+editor.fx.0.x=273
+editor.fx.0.y=0
+height=744
+package.numDependencies=18
+>>>>>>> c5079198475d03045fba86a963ae1faf42000582
+package.numTargets=20
+>>>>>>> fa259666448617f51ce5e4e13c00decf0d4f6727
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -316,7 +382,15 @@ target9.width=90
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1936
+=======
+<<<<<<< HEAD
+width=160
+=======
+width=1382
+>>>>>>> c5079198475d03045fba86a963ae1faf42000582
+>>>>>>> fa259666448617f51ce5e4e13c00decf0d4f6727
 world.lastInstantiated=Level1
 xPosition=0
 yPosition=0
