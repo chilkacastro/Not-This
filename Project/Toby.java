@@ -40,13 +40,13 @@
         /**
          * Act - do whatever the Toby wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
          */
-        public void act() 
-        {
+        public void act() {
             checkKeyPressed();
             slowDown();
-            scoreStatus();
-        } 
-        
+            if(isTouching(Cactus.class)) {
+                Greenfoot.setWorld(new Level2());
+            } 
+        }
         
         /**
          * checkKeyPressed - to move or control Toby whenever a key is pressed.
@@ -77,6 +77,7 @@
                     setImage(image10);
                 }
             }
+            
             // Helps Toby to move to the right side.
             if (Greenfoot.isKeyDown("right")) {
                 setLocation(getX() + 4, getY());
@@ -89,6 +90,7 @@
                       
                 }
             }
+            
             // Helps Toby to move to the left side
             if (Greenfoot.isKeyDown("left")) {
                 setLocation(getX() - 4, getY());
@@ -117,15 +119,6 @@
             }
         }
         
-        public void deductPoints() {
-            if(isTouching(TrafficCone.class)) {
-                MyWorld myWorld = (MyWorld)getWorld();
-                myWorld.addScore(-100);
-            }
-            
-        }
-    
-            
         
-   
+    
 }

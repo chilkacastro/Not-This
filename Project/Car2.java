@@ -21,10 +21,31 @@
                 move(-1);
         
             } 
-        }
-      public void removeToby() {
-            if(isTouching(Toby.class)) {
-                removeTouching(Toby.class);
-            }
-        }
-}
+            relocateToby();
+       }
+      
+      /**
+       * relocateToby() - puts Toby in his initial position in that level.
+       */
+      public void relocateToby() {
+          if (isTouching(Toby.class)) {
+            setLocation(800, 640);
+            ((MyWorld)getWorld()).lifeCount(-1);
+            printText();
+            // put sound here -> dog cry
+            //().showText("You lose a life!",360, 370);
+            // put blood here?? if Toby gets hit by a car
+
+         }     
+         
+     }
+    
+      /**
+       * printText() - tells that Toby loses a life.
+       */
+     public void printText() {
+         getWorld().showText("You lost a life!", 800, 400);
+     }
+      
+
+    }

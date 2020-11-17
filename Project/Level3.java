@@ -16,8 +16,10 @@ public class Level3 extends MyWorld
     public Level3()
     {
         prepare();
-        showScore();
-        loseCondition();
+        super.showScore();
+        super.addScore(0);
+        super.lifeCount(0);
+        
     }
 
     /**

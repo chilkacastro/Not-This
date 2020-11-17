@@ -8,19 +8,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1 extends MyWorld 
 {
- /**
+    /**
      * Constructor for objects of class Level1.
      * 
      */
     public Level1()
     {
-        setPaintOrder(Bench.class,Toby.class,TrafficCone.class);
+        setPaintOrder(Car.class,Car2.class,Bench.class,TrafficCone.class, Toby.class);
         prepare();
-        showScore();
-        loseCondition();
+        super.showScore();
+        super.addScore(0); 
+        super.lifeCount(0);
+        super.showLife();
        
     }
-
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -341,5 +343,12 @@ public class Level1 extends MyWorld
         trafficCone56.setLocation(164,34);
         trafficCone54.setLocation(483,359);
         removeObject(trafficCone2);
+        removeObject(toby);
+
+        Toby toby2 = new Toby();
+        addObject(toby2,814,614);
+        Toby toby3 = new Toby();
+        addObject(toby3,783,24);
+        removeObject(toby3);
     }
 }

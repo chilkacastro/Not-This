@@ -13,6 +13,4 @@ comment3.text=\r\n\ checkKeyPressed\ -\ to\ move\ or\ control\ Toby\ whenever\ a
 comment4.params=
 comment4.target=void\ slowDown()
 comment4.text=\r\n\ slowDown\ -\ to\ slow\ down\ Toby's\ movement.\r\n
-comment5.params=
-comment5.target=void\ deductPoints()
-numComments=6
+numComments=5

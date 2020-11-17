@@ -15,9 +15,11 @@ public class Level2 extends MyWorld
      */
     public Level2()
     {
+        setPaintOrder(Train.class, Cactus.class);
         prepare();
-        showScore();
-        loseCondition();
+        super.showScore();
+        super.addScore(0);
+        super.lifeCount(0);
     }
 
     /**
@@ -147,6 +149,8 @@ public class Level2 extends MyWorld
         cactus17.setLocation(1417,207);
         Train3 train38 = new Train3();
         addObject(train38,1417,207);
+        Toby toby2 = new Toby();
+        addObject(toby2,759,628);
     }
  
         
