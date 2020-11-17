@@ -24,7 +24,8 @@ public class MyWorld extends World
     public void loseCondition()
     {
     if (lifeCount<=0 && score<=0){
-    showText("YOU LOST: "+ score, 800, 325); 
+    showText("YOU LOST: "+ score, 800, 325);
+    Greenfoot.stop();
     }
     }
     

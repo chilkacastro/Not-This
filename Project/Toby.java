@@ -44,7 +44,7 @@
         {
             checkKeyPressed();
             slowDown();
-            scoreStatus();
+            deductPoints();
         } 
         
         
