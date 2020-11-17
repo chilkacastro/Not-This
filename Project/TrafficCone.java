@@ -18,6 +18,5 @@ public class TrafficCone extends Actor
            MyWorld myWorld = (MyWorld)getWorld();
            myWorld.addScore(-100);
        }
-        
     }    
 }

@@ -147,6 +147,8 @@ public class Level2 extends MyWorld
         cactus17.setLocation(1417,207);
         Train3 train38 = new Train3();
         addObject(train38,1417,207);
+        Toby toby2 = new Toby();
+        addObject(toby2,743,629);
     }
  
         
