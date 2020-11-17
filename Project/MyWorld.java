@@ -21,6 +21,13 @@ public class MyWorld extends World
         super(1600, 650, 1); 
     }
     
+    public void loseCondition()
+    {
+    if (lifeCount<=0 && score<=0){
+    showText("YOU LOST: "+ score, 800, 325); 
+    }
+    }
+    
     /**
      * addScore() - To show the score of the player.
      */
@@ -29,6 +36,7 @@ public class MyWorld extends World
             score = score + points;
         }
     }
+    
     /**
      * showScore() - To print the score.
      */
