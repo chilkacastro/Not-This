@@ -16,6 +16,7 @@ public class Level3 extends MyWorld
     public Level3()
     {
         prepare();
+        showScore();
     }
 
     /**

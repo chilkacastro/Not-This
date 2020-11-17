@@ -8,15 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1 extends MyWorld
 {
-
     /**
      * Constructor for objects of class Level1.
      * 
      */
     public Level1()
     {
-
+        setPaintOrder(Bench.class,Toby.class,TrafficCone.class);
         prepare();
+        showScore();
     }
 
     /**
@@ -335,5 +335,9 @@ public class Level1 extends MyWorld
         addObject(car4,476,584);
         trafficCone29.setLocation(932,75);
         trafficCone29.setLocation(932,71);
+        trafficCone55.setLocation(86,38);
+        trafficCone56.setLocation(164,34);
+        trafficCone54.setLocation(483,359);
+        removeObject(trafficCone2);
     }
 }

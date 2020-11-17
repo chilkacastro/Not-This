@@ -115,26 +115,15 @@
                 counter += 1;
             }
         }
-         public void removeToby() {
-             if(isTouching(Hole1.class)) {
-                getWorld().removeObject(this);
-                // put sound here -> dog cry
-                getWorld().showText("You lose a life!",360, 370);
-                Greenfoot.stop();
-            }   
-            if(isTouching(Hole2.class)) {
-                getWorld().removeObject(this);
-                // put sound here -> dog cry
-                getWorld().showText("You lose a life!",360, 370);
-                Greenfoot.stop();
+        public void scoreStatus() {
+            if(isTouching(TrafficCone.class)) {
+                MyWorld myWorld = (MyWorld)getWorld();
+                myWorld.addScore(-100);
             }
-             if(isTouching(Car.class)) {
-                getWorld().removeObject(this);
-                // put sound here -> dog cry
-                getWorld().showText("You lose a life!",360, 370);
-                Greenfoot.stop();
-            }   
             
-        } 
+        }
+    
+            
+        
    
 }

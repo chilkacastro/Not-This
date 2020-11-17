@@ -20,7 +20,13 @@ public class Car extends Actor
             
         }
     } 
-    
+    public void removeToby() {
+        if(isTouching(Toby.class)) {
+                removeTouching(Toby.class);
+                // put sound here -> dog cry
+                //().showText("You lose a life!",360, 370);
+                
+        }
 
-    
+    }
 }
