@@ -21,6 +21,10 @@
                 move(-1);
         
             } 
+            if(isTouching(Toby.class))
+            {
+                Greenfoot.playSound("tireSkid.wav");
+            }
         }
       public void removeToby() {
             if(isTouching(Toby.class)) {

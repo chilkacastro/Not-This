@@ -19,6 +19,10 @@ public class Car extends Actor
             getWorld().removeObject(this);
             
         }
+        if(isTouching(Toby.class))
+        {
+            Greenfoot.playSound("tireSkid.wav");
+        }
     } 
     public void removeToby() {
         if(isTouching(Toby.class)) {

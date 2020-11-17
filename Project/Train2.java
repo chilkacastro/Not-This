@@ -19,5 +19,9 @@ public class Train2 extends Actor
             getWorld().removeObject(this);
             
         }
+         if(isTouching(Toby.class))
+        {
+            Greenfoot.playSound("Train.wav");
+        }
     }    
 }
