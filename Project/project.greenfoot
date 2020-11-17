@@ -29,12 +29,13 @@ dependency12.type=UsesDependency
 dependency13.from=Level1
 dependency13.to=Car
 dependency13.type=UsesDependency
-dependency14.from=TrafficCone
-dependency14.to=MyWorld
+dependency14.from=Toby
+dependency14.to=Hole1
 dependency14.type=UsesDependency
-dependency15.from=TrafficCone
-dependency15.to=Toby
+dependency15.from=Toby
+dependency15.to=Hole2
 dependency15.type=UsesDependency
+<<<<<<< HEAD
 dependency16.from=Train3
 dependency16.to=Toby
 dependency16.type=UsesDependency
@@ -71,6 +72,20 @@ dependency25.type=UsesDependency
 dependency26.from=Train
 dependency26.to=Toby
 dependency26.type=UsesDependency
+=======
+dependency16.from=Toby
+dependency16.to=Car
+dependency16.type=UsesDependency
+dependency17.from=Hole2
+dependency17.to=Toby
+dependency17.type=UsesDependency
+dependency18.from=Hole1
+dependency18.to=Toby
+dependency18.type=UsesDependency
+dependency2.from=Level2
+dependency2.to=Train2
+dependency2.type=UsesDependency
+>>>>>>> c5079198475d03045fba86a963ae1faf42000582
 dependency3.from=Level2
 dependency3.to=Train
 dependency3.type=UsesDependency
@@ -92,12 +107,21 @@ dependency8.type=UsesDependency
 dependency9.from=Level1
 dependency9.to=Hole1
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=744
 editor.fx.0.width=1382
 editor.fx.0.x=-8
 editor.fx.0.y=-8
 height=28
 package.numDependencies=26
+=======
+editor.fx.0.height=735
+editor.fx.0.width=816
+editor.fx.0.x=273
+editor.fx.0.y=0
+height=744
+package.numDependencies=18
+>>>>>>> c5079198475d03045fba86a963ae1faf42000582
 package.numTargets=20
 project.charset=UTF-8
 publish.hasSource=false
@@ -112,7 +136,7 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
-simulation.speed=57
+simulation.speed=42
 target1.height=50
 target1.name=Heart
 target1.showInterface=false
@@ -254,7 +278,11 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=160
+=======
+width=1382
+>>>>>>> c5079198475d03045fba86a963ae1faf42000582
 world.lastInstantiated=Level1
 xPosition=0
 yPosition=0

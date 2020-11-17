@@ -17,6 +17,7 @@ public class Level3 extends MyWorld
     {
         prepare();
         showScore();
+        loseCondition();
     }
 
     /**

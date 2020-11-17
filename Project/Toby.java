@@ -44,6 +44,7 @@
         {
             checkKeyPressed();
             slowDown();
+            scoreStatus();
         } 
         
         
@@ -115,7 +116,8 @@
                 counter += 1;
             }
         }
-        public void scoreStatus() {
+        
+        public void deductPoints() {
             if(isTouching(TrafficCone.class)) {
                 MyWorld myWorld = (MyWorld)getWorld();
                 myWorld.addScore(-100);

@@ -17,7 +17,7 @@ public class Level2 extends MyWorld
     {
         prepare();
         showScore();
-        
+        loseCondition();
     }
 
     /**
@@ -138,6 +138,15 @@ public class Level2 extends MyWorld
         removeObject(train33);
         removeObject(train3);
         removeObject(train4);
+        Train train5 = new Train();
+        addObject(train5,1460,556);
+        Train2 train23 = new Train2();
+        addObject(train23,1365,449);
+        Train3 train37 = new Train3();
+        addObject(train37,1437,310);
+        cactus17.setLocation(1417,207);
+        Train3 train38 = new Train3();
+        addObject(train38,1417,207);
     }
  
         
