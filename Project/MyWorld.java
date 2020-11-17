@@ -25,7 +25,7 @@ public class MyWorld extends World
      * addScore() - To show the score of the player.
      */
     public void addScore(int points) {
-        if(points <= 0) {
+        if (points <= 0) {
             score = score + points;
         }
     }
