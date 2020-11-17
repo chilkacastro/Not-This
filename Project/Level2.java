@@ -18,7 +18,7 @@ public class Level2 extends MyWorld
         setPaintOrder(Train.class, Cactus.class);
         prepare();
         super.showScore();
-        super.addScore(0);
+        super.getScore(0);
         super.lifeCount(0);
     }
 
@@ -151,6 +151,35 @@ public class Level2 extends MyWorld
         addObject(train38,1417,207);
         Toby toby2 = new Toby();
         addObject(toby2,759,628);
+        toby2.setLocation(754,622);
+        removeObject(toby2);
+        KeyPass2 keyPass2 = new KeyPass2();
+        addObject(keyPass2,813,26);
+        Coin coin = new Coin();
+        addObject(coin,365,258);
+        Coin coin2 = new Coin();
+        addObject(coin2,985,383);
+        Coin coin3 = new Coin();
+        addObject(coin3,437,491);
+        Coin coin4 = new Coin();
+        addObject(coin4,1177,141);
+        Coin coin5 = new Coin();
+        addObject(coin5,152,141);
+        Coin coin6 = new Coin();
+        addObject(coin6,981,504);
+        Coin coin7 = new Coin();
+        addObject(coin7,59,495);
+        Coin coin8 = new Coin();
+        addObject(coin8,58,366);
+        Coin coin9 = new Coin();
+        addObject(coin9,614,149);
+        Coin coin10 = new Coin();
+        addObject(coin10,1055,146);
+        Coin coin11 = new Coin();
+        addObject(coin11,374,432);
+        coin11.setLocation(367,380);
+        Toby toby3 = new Toby();
+        addObject(toby3,800,621);
     }
  
         

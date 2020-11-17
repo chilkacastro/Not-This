@@ -60,5 +60,8 @@ public class Level3 extends MyWorld
         addObject(water15,1028,294);
         Water water16 = new Water();
         addObject(water16,1170,182);
+        Toby toby = new Toby();
+        addObject(toby,820,618);
+        toby.setLocation(814,631);
     }
 }

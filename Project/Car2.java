@@ -14,6 +14,7 @@
          */
         public void act() {
             move(3);
+            relocateToby();
             if(isAtEdge()) {
                 turn(45);
                 move(20);
@@ -21,8 +22,8 @@
                 move(-1);
         
             } 
-<<<<<<< HEAD
-            relocateToby();
+
+            
        }
       
       /**
@@ -30,8 +31,10 @@
        */
       public void relocateToby() {
           if (isTouching(Toby.class)) {
-            setLocation(800, 640);
+            Greenfoot.playSound("tireSkid.wav");
             ((MyWorld)getWorld()).lifeCount(-1);
+            ((MyWorld)getWorld()).addScore(-10000);  
+            
             printText();
             // put sound here -> dog cry
             //().showText("You lose a life!",360, 370);
@@ -47,19 +50,7 @@
      public void printText() {
          getWorld().showText("You lost a life!", 800, 400);
      }
+    
+    }
       
 
-    }
-=======
-            if(isTouching(Toby.class))
-            {
-                Greenfoot.playSound("tireSkid.wav");
-            }
-        }
-      public void removeToby() {
-            if(isTouching(Toby.class)) {
-                removeTouching(Toby.class);
-            }
-        }
-}
->>>>>>> fa259666448617f51ce5e4e13c00decf0d4f6727

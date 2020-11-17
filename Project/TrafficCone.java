@@ -14,8 +14,7 @@ public class TrafficCone extends Actor
     public void act() 
     {
        if(isTouching(Toby.class)) {
-           MyWorld myWorld = (MyWorld)getWorld();
-           myWorld.addScore(-100);
+           ((MyWorld)getWorld()).addScore(-100);
            
        }
         

@@ -30,7 +30,7 @@ public class Hole1 extends Actor
             //().showText("You lose a life!",360, 370);
             // put blood here?? if Toby gets hit by a car
             //reviveToby();
-                
+              
         }
         
 

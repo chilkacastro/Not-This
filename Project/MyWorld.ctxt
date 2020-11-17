@@ -16,4 +16,6 @@ comment4.text=\r\n\ showScore()\ -\ To\ print\ the\ score.\r\n
 comment5.params=
 comment5.target=void\ showLife()
 comment5.text=\r\n\ showLife()\ -\ To\ show\ how\ many\ lives\ does\ Toby\ has.\r\n
-numComments=6
+comment6.params=score
+comment6.target=int\ getScore(int)
+numComments=7

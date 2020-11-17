@@ -14,6 +14,8 @@ public class Coin extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        if(isTouching(Toby.class)) {
+            ((MyWorld)getWorld()).addScore(100);  
+        }    
+}
 }

@@ -39,6 +39,7 @@ public class MyWorld extends World
      */
     public void lifeCount(int lives) {
         lifeCount = lifeCount + lives;
+        showLife();
         if (lifeCount <= 0) {
             showText("No more lives left!", 600, 600);
         
@@ -58,6 +59,10 @@ public class MyWorld extends World
      */
     public void showLife() {
         showText("Lives:" + lifeCount, 200, 25);
+    }
+    
+    public int getScore(int score) {
+        return score;
     }
 }
     
