@@ -10,7 +10,7 @@ public class MyWorld extends World
 {
     protected static int score = 1000;
     protected static int lifeCount = 3;
-
+    protected Counter counter =  new  Counter();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -20,7 +20,13 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1600, 650, 1); 
     }
-    
+    /**
+     * Returns the life counter
+     */
+    public Counter getCounter()
+    {
+        return counter;
+    }
     public void loseCondition()
     {
     if (lifeCount<=0 && score<=0){

@@ -7,34 +7,34 @@ import greenfoot.*;
 public class Counter extends Actor
 {
     /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
-    protected int score = 0;
+    protected int lifescore = 3;
 
     /**
      * Act - do whatever the Counter wants to do. A Counter will appear whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        setImage( new  GreenfootImage("Score : " + score, 30, Color.YELLOW, Color.BLACK));
-        if (score == 4) {
+        setImage( new  GreenfootImage("Life : " + lifescore, 30, Color.YELLOW, Color.BLACK));
+        if (lifescore == 0) {
             Greenfoot.stop();
-            getWorld().showText("VICTORY!", 300, 200);
+            getWorld().showText("YOU DIED!", 300, 200);
         }
         
     }
 
     /**
-     * 
+     * Adds one life to the total amount of life
      */
-    public void addScore()
+    public void addLife()
     {
-        score = score + 1;
+        lifescore = lifescore + 1;
     }
 
     /**
-     * 
+     * Removes one life to the total amount of life
      */
-    public void minScore()
+    public void minLife()
     {
-        score = score - 1;
+        lifescore = lifescore - 1;
     }
 }

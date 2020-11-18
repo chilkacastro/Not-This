@@ -15,8 +15,13 @@ public class Car extends Actor
     public void act() {
       setLocation(getX()-2, getY());
       // Removes Toby and plays crying sound while also removing 1 life (life counter to be implemented)
-      if(isTouching(Toby.class)) {
+      if (isTouching(Toby.class)) {
+            World myWorld = getWorld();
+            Level1 level1 = (Level1)myWorld;
+            MyWorld myworld = (MyWorld)myWorld;
+            Counter counter = level1.getCounter();
             Greenfoot.playSound("tireSkid.wav");
+            counter.minLife();
             removeTouching(Toby.class);
             getWorld().showText("You lose a life!",500, 500);
             Greenfoot.stop();
