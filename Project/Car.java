@@ -14,16 +14,16 @@ public class Car extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
-<<<<<<< HEAD
-        relocateToby();
-        setLocation(getX()-speed, getY());
-        if (getX() == 0) {
+      relocateToby();
+      setLocation(getX()-speed, getY());
+      if (getX() == 0) {
             getWorld().removeObject(this);    // problem with this and Toby --> Chilka: Error appears...I will try to fix this
             // possible solution-> put the cars in initial position again???
-            
-=======
-      setLocation(getX()-2, getY());
-      // Removes Toby and plays crying sound while also removing 1 life (life counter to be implemented)
+          setLocation(getX()-2, getY());
+          // Removes Toby and plays crying sound while also removing 1 life (life counter to be implemented)
+        
+      }
+      
       if (isTouching(Toby.class)) {
             World myWorld = getWorld();
             Level1 level1 = (Level1)myWorld;
@@ -34,10 +34,9 @@ public class Car extends Actor
             removeTouching(Toby.class);
             getWorld().showText("You lose a life!",500, 500);
             Greenfoot.stop();
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
+
         }
         
-
     } 
     
     /**

@@ -6,47 +6,39 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level1 extends MyWorld 
-{
-<<<<<<< HEAD
-=======
+public class Level1 extends MyWorld {
     protected Counter counter =  new  Counter();
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
+    
     /**
      * Constructor for objects of class Level1.
      * 
      */
-    public Level1()
-    {
+    public Level1() {
         setPaintOrder(Car.class,Car2.class,Bench.class,TrafficCone.class, Toby.class);
         prepare();
-<<<<<<< HEAD
-        super.showScore();
+        
+        /* super.showScore();
         super.addScore(0); 
         super.lifeCount(0);
-        super.showLife();
-       
-    }
-=======
+        super.showLife(); */
+
         showScore();
-        loseCondition();
+        // loseCondition();
         
     }
+    
     /**
      * Returns the life counter
      */
-    public Counter getCounter()
-    {
+      public Counter getCounter() {
         return counter;
     }
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
-    
+
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
-    {
+    private void prepare() {
         Counter counter =  new  Counter();
         removeObject(counter);
         TrafficCone trafficCone = new TrafficCone();
@@ -363,9 +355,7 @@ public class Level1 extends MyWorld
         trafficCone56.setLocation(164,34);
         trafficCone54.setLocation(483,359);
         removeObject(trafficCone2);
-<<<<<<< HEAD
         removeObject(toby);
-
         Toby toby2 = new Toby();
         addObject(toby2,814,614);
         Toby toby3 = new Toby();
@@ -435,8 +425,6 @@ public class Level1 extends MyWorld
         car215.setLocation(1089,62);
         KeyPass keyPass = new KeyPass();
         addObject(keyPass,812,19);
-=======
         addObject(counter,1503,24);
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
     }
 }

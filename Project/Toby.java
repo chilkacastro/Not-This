@@ -20,8 +20,8 @@
         /**
          * To create objects.
          */  
-        public Toby()
-        {
+        public Toby() {
+        
             image1 = new GreenfootImage("Right1.png");
             image3 = new GreenfootImage("Right3.png");
             image4 = new GreenfootImage("Left1.png");
@@ -39,7 +39,6 @@
         public void act() {
             checkKeyPressed();
             slowDown();
-<<<<<<< HEAD
             nextLevel();
         }
         
@@ -48,31 +47,27 @@
          */
 
         public void nextLevel() {
-         // Level 2
+            // Level 2
            if(isTouching(KeyPass.class)) {
                 //((MyWorld)getWorld()).addObject(this, 10, 200);
                 Greenfoot.setWorld(new Level2());
             } 
-         // Level 3
+            // Level 3
            if(isTouching(KeyPass2.class)) {
                 //((MyWorld)getWorld()).addObject(this, 10, 200);
                 Greenfoot.setWorld(new Level3());
             }  
-            
-        }
-        
-        
-=======
-                if (isTouching(Car.class)) {
+ 
+           if (isTouching(Car.class)) {
                     World myWorld = getWorld();
                     World Level1 = getWorld();
                     Greenfoot.playSound("Crying.wav");
                     Level1 level1 = (Level1)myWorld;
                     Counter counter = level1.getCounter();
                     counter.minLife();  
-            } 
+           } 
         }  
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
+
         /**
          * checkKeyPressed - to move or control Toby whenever a key is pressed.
          */
@@ -89,6 +84,7 @@
                 }
                     
             }  
+            
             // Helps Toby to move downwards
             if (Greenfoot.isKeyDown("down")) {
                 setLocation(getX(), getY() + 4);
@@ -126,6 +122,7 @@
                 }
             }
         }
+        
         /**
          * slowDown - to slow down Toby's movement.
          */
@@ -139,16 +136,15 @@
                 slow += 1;
             }
         }
-<<<<<<< HEAD
-        
-        
-    
-=======
+
+        /**
+         * deductPoints() - to remove points when Toby touches obstacles.
+         */
         public void deductPoints() {
-            if(isTouching(TrafficCone.class)) {
+           if(isTouching(TrafficCone.class)) {
                 MyWorld myWorld = (MyWorld)getWorld();
                 myWorld.addScore(-100);
-            }
+           }
         }
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
+
 }
