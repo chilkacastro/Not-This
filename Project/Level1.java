@@ -14,7 +14,7 @@ public class Level1 extends MyWorld
      */
     public Level1()
     {
-        setPaintOrder(Bench.class,Toby.class,TrafficCone.class);
+        setPaintOrder(Bench.class,Toby.class,Car.class, TrafficCone.class, Car2.class);
         prepare();
         showScore();
         loseCondition();
