@@ -14,11 +14,38 @@ public class Hole1 extends Actor
      */
     public void act() 
     {
-        if(isTouching(Toby.class)) {
-            Greenfoot.playSound("Crying.wav");
-            removeTouching(Toby.class);
-            getWorld().showText("You lose a life!",500, 500);
-            Greenfoot.stop();
+       removeToby();
+        // put sound here -> dog cry
+        //getWorld().showText("You lose a life!",360, 370);
+        //Greenfoot.stop();
         }
-    }    
+    
+    /**
+     * removeToby() - to remove Toby from the World and bring him back to his initial position in that level.
+     */
+    public void removeToby() {
+        if(isTouching(Toby.class)) {
+            removeTouching(Toby.class);
+            // put sound here -> dog cry
+            //().showText("You lose a life!",360, 370);
+            // put blood here?? if Toby gets hit by a car
+            //reviveToby();
+              
+        }
+        
+
+    }
+
+    
+    /**
+     * reviveToby() - bring back Toby
+     */
+    public void reviveToby() {
+        
+        MyWorld myWorld = (MyWorld)getWorld();
+        myWorld.addScore(-200);
+        myWorld.lifeCount(-1);
+        Level1 myLevel1 = (Level1)getWorld();
+        myLevel1.addObject(new Toby(), 800, 640);
+    }
 }

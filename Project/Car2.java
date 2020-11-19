@@ -14,18 +14,43 @@
          */
         public void act() {
             move(3);
+            relocateToby();
             if(isAtEdge()) {
                 turn(45);
                 move(20);
                 turn(45);
                 move(-1);
+        
             } 
-            // Removes Toby and plays crying sound while also removing 1 life (life counter to be implemented)
-            if(isTouching(Toby.class)) {
-                Greenfoot.playSound("tireSkid.wav");
-                removeTouching(Toby.class);
-                getWorld().showText("You lose a life!",500, 500);
-                Greenfoot.stop();
-        }
-      }
-}
+
+            
+       }
+      
+      /**
+       * relocateToby() - puts Toby in his initial position in that level.
+       */
+      public void relocateToby() {
+          if (isTouching(Toby.class)) {
+            Greenfoot.playSound("tireSkid.wav");
+            ((MyWorld)getWorld()).lifeCount(-1);
+            ((MyWorld)getWorld()).addScore(-10000);  
+            
+            printText();
+            // put sound here -> dog cry
+            //().showText("You lose a life!",360, 370);
+            // put blood here?? if Toby gets hit by a car
+
+         }     
+         
+     }
+    
+      /**
+       * printText() - tells that Toby loses a life.
+       */
+     public void printText() {
+         getWorld().showText("You lost a life!", 800, 400);
+     }
+    
+    }
+      
+

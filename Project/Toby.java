@@ -40,12 +40,29 @@
         /**
          * Act - do whatever the Toby wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
          */
-        public void act() 
-        {
+        public void act() {
             checkKeyPressed();
             slowDown();
+            nextLevel();
+        }
+        
+        /**
+         *  nextLevel() - to move Toby to the next level.
+         */
+
+        public void nextLevel() {
+         // Level 2
+           if(isTouching(KeyPass.class)) {
+                //((MyWorld)getWorld()).addObject(this, 10, 200);
+                Greenfoot.setWorld(new Level2());
+            } 
+         // Level 3
+           if(isTouching(KeyPass2.class)) {
+                //((MyWorld)getWorld()).addObject(this, 10, 200);
+                Greenfoot.setWorld(new Level3());
+            }  
             
-        } 
+        }
         
         
         /**
@@ -77,6 +94,7 @@
                     setImage(image10);
                 }
             }
+            
             // Helps Toby to move to the right side.
             if (Greenfoot.isKeyDown("right")) {
                 setLocation(getX() + 4, getY());
@@ -89,6 +107,7 @@
                       
                 }
             }
+            
             // Helps Toby to move to the left side
             if (Greenfoot.isKeyDown("left")) {
                 setLocation(getX() - 4, getY());
@@ -117,15 +136,6 @@
             }
         }
         
-        public void deductPoints() {
-            if(isTouching(TrafficCone.class)) {
-                MyWorld myWorld = (MyWorld)getWorld();
-                myWorld.addScore(-100);
-            }
-            
-        }
-    
-            
         
-   
+    
 }

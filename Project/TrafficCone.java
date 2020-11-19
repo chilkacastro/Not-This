@@ -9,14 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TrafficCone extends Actor
 {
     /**
-     * Act - do whatever the TrafficCone wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the TrafficCone wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
        if(isTouching(Toby.class)) {
-           MyWorld myWorld = (MyWorld)getWorld();
-           myWorld.addScore(-100);
+           ((MyWorld)getWorld()).addScore(-100);
+           
        }
+        
     }    
 }

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Hole1 here.
+ * Write a description of class Hole2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -9,16 +9,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hole2 extends Actor
 {
     /**
-     * Act - do whatever the Hole1 wants to do. This method is called whenever
+     * Act - do whatever the Hole2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+     touchHole(); 
+    }   
+    
+    public void touchHole() {
         if(isTouching(Toby.class)) {
-            Greenfoot.playSound("Crying.wav");
             removeTouching(Toby.class);
-            getWorld().showText("You lose a life!",500, 500);
-            Greenfoot.stop();
+            // put sound here -> dog cry
+            //getWorld().showText("You lose a life!",360, 370);
+            // do addObject here
+            
         }
-    }    
+    }
 }
