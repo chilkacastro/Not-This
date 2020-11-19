@@ -1,21 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Coin here.
+ * Write a description of class KeyPass2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coin extends Actor
+public class KeyPass2 extends Actor
 {
     /**
-     * Act - do whatever the Coin wants to do. This method is called whenever
+     * Act - do whatever the KeyPass2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if(isTouching(Toby.class)) {
-            ((MyWorld)getWorld()).addScore(100);  
-        }    
-}
+        // Add your action code here.
+    }    
 }
