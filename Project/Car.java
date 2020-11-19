@@ -10,23 +10,24 @@ public class Car extends Actor
 {
     private int speed;
     /**
-     * Act - do whatever the Car wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Removes the car when it reaches the edge
      */
     public void act() {
-        setLocation(getX()-2, getY());
-        if (getX() == 0) {
-            getWorld().removeObject(this);
-            
+      setLocation(getX()-2, getY());
+      // Removes Toby and plays crying sound while also removing 1 life (life counter to be implemented)
+      if (isTouching(Toby.class)) {
+            World myWorld = getWorld();
+            Level1 level1 = (Level1)myWorld;
+            MyWorld myworld = (MyWorld)myWorld;
+            //Counter counter = level1.getCounter();
+            Greenfoot.playSound("tireSkid.wav");
+            counter.minLife();
+            removeTouching(Toby.class);
+            getWorld().showText("You lose a life!",500, 500);
+            Greenfoot.stop();
         }
-    } 
-    public void removeToby() {
-        if(isTouching(Toby.class)) {
-                removeTouching(Toby.class);
-                // put sound here -> dog cry
-                //().showText("You lose a life!",360, 370);
-                
-        }
-
-    }
+        if(isAtEdge()) {
+             getWorld().removeObject(this);
+      } 
+   } 
 }

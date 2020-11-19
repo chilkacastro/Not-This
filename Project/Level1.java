@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1 extends MyWorld 
 {
- /**
+    protected Counter counter =  new  Counter();
+    /**
      * Constructor for objects of class Level1.
      * 
      */
@@ -18,15 +19,24 @@ public class Level1 extends MyWorld
         prepare();
         showScore();
         loseCondition();
-       
+        
     }
-
+    /**
+     * Returns the life counter
+     */
+    public Counter getCounter()
+    {
+        return counter;
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
+        Counter counter =  new  Counter();
+        removeObject(counter);
         TrafficCone trafficCone = new TrafficCone();
         addObject(trafficCone,120,563);
         TrafficCone trafficCone2 = new TrafficCone();
@@ -341,5 +351,6 @@ public class Level1 extends MyWorld
         trafficCone56.setLocation(164,34);
         trafficCone54.setLocation(483,359);
         removeObject(trafficCone2);
+        addObject(counter,1503,24);
     }
 }

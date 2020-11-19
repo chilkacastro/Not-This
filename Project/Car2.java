@@ -19,12 +19,13 @@
                 move(20);
                 turn(45);
                 move(-1);
-        
             } 
-        }
-      public void removeToby() {
+            // Removes Toby and plays crying sound while also removing 1 life (life counter to be implemented)
             if(isTouching(Toby.class)) {
+                Greenfoot.playSound("tireSkid.wav");
                 removeTouching(Toby.class);
-            }
+                getWorld().showText("You lose a life!",500, 500);
+                Greenfoot.stop();
         }
+      }
 }
