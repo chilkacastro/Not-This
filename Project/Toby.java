@@ -16,9 +16,7 @@
         private GreenfootImage image9 = null;
         private GreenfootImage image10 = null;
         private GreenfootImage image12 = null;
-        private int counter= 0;
-    
-    
+        private int slow = 0;
         /**
          * To create objects.
          */  
@@ -35,14 +33,13 @@
             setImage(image7);
         
         }
-        
-        
         /**
          * Act - do whatever the Toby wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
          */
         public void act() {
             checkKeyPressed();
             slowDown();
+<<<<<<< HEAD
             nextLevel();
         }
         
@@ -65,11 +62,21 @@
         }
         
         
+=======
+                if (isTouching(Car.class)) {
+                    World myWorld = getWorld();
+                    World Level1 = getWorld();
+                    Greenfoot.playSound("Crying.wav");
+                    Level1 level1 = (Level1)myWorld;
+                    Counter counter = level1.getCounter();
+                    counter.minLife();  
+            } 
+        }  
+>>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
         /**
          * checkKeyPressed - to move or control Toby whenever a key is pressed.
          */
          public void checkKeyPressed() {
-        
             // Helps Toby to move forward
             if (Greenfoot.isKeyDown("up")) {
                 setLocation(getX(), getY() - 4);
@@ -81,8 +88,7 @@
                     setImage(image7);
                 }
                     
-            }
-                
+            }  
             // Helps Toby to move downwards
             if (Greenfoot.isKeyDown("down")) {
                 setLocation(getX(), getY() + 4);
@@ -120,22 +126,29 @@
                 }
             }
         }
-    
-        
         /**
          * slowDown - to slow down Toby's movement.
          */
          public void slowDown(){
             // Helps slow down Toby's movement.
-            if (counter == 50){
+            if (slow == 50){
                 checkKeyPressed();
-                counter = 0;
+                slow = 0;
             }
             else {
-                counter += 1;
+                slow += 1;
             }
         }
+<<<<<<< HEAD
         
         
     
+=======
+        public void deductPoints() {
+            if(isTouching(TrafficCone.class)) {
+                MyWorld myWorld = (MyWorld)getWorld();
+                myWorld.addScore(-100);
+            }
+        }
+>>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
 }

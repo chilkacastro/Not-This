@@ -8,9 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+<<<<<<< HEAD
     protected int score = 10000;      // initial points
     protected int lifeCount = 3;     // initial 3 lives
 
+=======
+    protected static int score = 1000;
+    protected static int lifeCount = 3;
+    protected Counter counter =  new  Counter();
+>>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -18,6 +24,7 @@ public class MyWorld extends World
     public MyWorld() {
         super(1600, 650, 1); 
     }
+<<<<<<< HEAD
     
    
     /**
@@ -32,6 +39,20 @@ public class MyWorld extends World
          
           
         }
+=======
+    /**
+     * Returns the life counter
+     */
+    public Counter getCounter()
+    {
+        return counter;
+    }
+    public void loseCondition()
+    {
+    if (lifeCount<=0 && score<=0){
+    showText("YOU LOST: "+ score, 800, 325); 
+    }
+>>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
     }
     
     /**

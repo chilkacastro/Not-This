@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1 extends MyWorld 
 {
+<<<<<<< HEAD
+=======
+    protected Counter counter =  new  Counter();
+>>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
     /**
      * Constructor for objects of class Level1.
      * 
@@ -16,12 +20,26 @@ public class Level1 extends MyWorld
     {
         setPaintOrder(Car.class,Car2.class,Bench.class,TrafficCone.class, Toby.class);
         prepare();
+<<<<<<< HEAD
         super.showScore();
         super.addScore(0); 
         super.lifeCount(0);
         super.showLife();
        
     }
+=======
+        showScore();
+        loseCondition();
+        
+    }
+    /**
+     * Returns the life counter
+     */
+    public Counter getCounter()
+    {
+        return counter;
+    }
+>>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
     
     /**
      * Prepare the world for the start of the program.
@@ -29,6 +47,8 @@ public class Level1 extends MyWorld
      */
     private void prepare()
     {
+        Counter counter =  new  Counter();
+        removeObject(counter);
         TrafficCone trafficCone = new TrafficCone();
         addObject(trafficCone,120,563);
         TrafficCone trafficCone2 = new TrafficCone();
@@ -343,6 +363,7 @@ public class Level1 extends MyWorld
         trafficCone56.setLocation(164,34);
         trafficCone54.setLocation(483,359);
         removeObject(trafficCone2);
+<<<<<<< HEAD
         removeObject(toby);
 
         Toby toby2 = new Toby();
@@ -414,5 +435,8 @@ public class Level1 extends MyWorld
         car215.setLocation(1089,62);
         KeyPass keyPass = new KeyPass();
         addObject(keyPass,812,19);
+=======
+        addObject(counter,1503,24);
+>>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
     }
 }
