@@ -11,12 +11,19 @@ public class TrafficCone extends Actor
     /**
      * Act - do whatever the TrafficCone wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
-       if(isTouching(Toby.class)) {
-           ((MyWorld)getWorld()).addScore(-100);
-           
-       }
-        
+     public void act() {
+        deductPoints();
+
     }    
+    
+    /**
+     * deducPoints() - to remove points when Toby touches the traffic cones.
+     */
+     public void deductPoints() {
+       if (isTouching(Toby.class)) {
+            MyWorld myWorld = (MyWorld)getWorld();
+            myWorld.addScore(-100);
+       }
+    
+    }
 }

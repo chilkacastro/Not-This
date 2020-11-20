@@ -6,8 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level3 extends MyWorld
-{
+public class Level3 extends MyWorld {
+
 
     /**
      * Constructor for objects of class Level3.
@@ -16,10 +16,9 @@ public class Level3 extends MyWorld
     public Level3()
     {
         prepare();
-        super.showScore();
-        super.addScore(0);
-        super.lifeCount(0);
-        
+        showScore();
+        showLife();
+
     }
 
     /**

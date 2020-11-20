@@ -1,90 +1,100 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    
 /**
  * Write a description of class MyWorld here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
-{
-<<<<<<< HEAD
-    protected int score = 10000;      // initial points
-    protected int lifeCount = 3;     // initial 3 lives
+ public class MyWorld extends World {
 
-=======
-    protected static int score = 1000;
-    protected static int lifeCount = 3;
-    protected Counter counter =  new  Counter();
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    public MyWorld() {
-        super(1600, 650, 1); 
-    }
-<<<<<<< HEAD
-    
-   
-    /**
-     * addScore() - To decrease or increase the score of the player.
-     */
-    public void addScore(int points) {
-        score = score + points;
-        showScore();
-        if (score <= 0) {
-         showText("You lost!", 600, 600); 
-         Greenfoot.stop();
-         
-          
+    protected int score;                // initial points
+    protected int lifeCount;            // initial 3 lives
+    protected static int zeroScore;
+
+        /**
+         * Constructor for objects of class MyWorld.
+         * 
+         */
+        public MyWorld() {
+            super(1600, 650, 1); 
+            score = 10000;
+            lifeCount = 3;
+            zeroScore = 0;
         }
-=======
-    /**
-     * Returns the life counter
-     */
-    public Counter getCounter()
-    {
-        return counter;
-    }
-    public void loseCondition()
-    {
-    if (lifeCount<=0 && score<=0){
-    showText("YOU LOST: "+ score, 800, 325); 
-    }
->>>>>>> 3d1193f4033b83662cdc657eed90a216aee1ea88
-    }
-    
-    /**
-     * lifeCount() - To decrease or increase the life count of Toby.
-     */
-    public void lifeCount(int lives) {
-        lifeCount = lifeCount + lives;
-        showLife();
-        if (lifeCount <= 0) {
-            showText("No more lives left!", 600, 600);
         
+        // GETTERS
+        /**
+         * getScore() - To allow the actor classes to access the score.
+         */
+      
+         public int getScore() {
+            return score;
+        } 
+        /**
+         * getLifeCount() - To allow the actor classes to access the lifeCount.
+         */
+        public int getLifeCount() {
+            return lifeCount;
         }
-    }
     
-    /**
-     * showScore() - To print the score.
-     */
-     public void showScore() {
-        showText("Score: "+ score, 80, 25);
-    }
-    
-    
-    /**
-     * showLife() - To show how many lives does Toby has.
-     */
-    public void showLife() {
-        showText("Lives:" + lifeCount, 200, 25);
-    }
-    
-    public int getScore(int score) {
-        return score;
-    }
+        // SCORE
+        /**
+         * addScore() - To decrease or increase the score of the player.
+         */
+        public void addScore(int points) {
+            score += points;
+            showScore();
+        }
+        /**
+         * showScore() - To print the score.
+         */
+         public void showScore() {
+            if (score > 0) {
+                showText("Score: "+ score, 80, 25);
+            }
+            else {
+                showText("Score:" + zeroScore, 80, 25);
+                if (score > 0) {
+                    showText("Score:" + zeroScore, 80, 25);   
+                }
+            }
+        }
+        
+        // LIFE 
+        /**
+         * lifeCount() - To decrease or increase the life count of Toby.
+         */
+        public void lifeCount(int lives) {
+            lifeCount += lives;
+            showLife();
+        }
+        /**
+         * showLife() - To show how many lives does Toby has and if player lost.
+         */
+        public void showLife() {
+            showText("Lives:" + lifeCount, 200, 25);
+            if (lifeCount <= 0){
+                showText("YOU LOST!", 800, 325); 
+                if (score > 0) {
+                    showText("Score:  " + score, 800, 420); 
+                }
+                if (score <= 0) {
+                    showText("Score:  " + zeroScore, 800, 420); 
+                }
+            }
+        }
+        
+        /**
+         * stopGame() - To stop the game when life count reaches to 0.
+         */
+        public void stopGame() {
+            if (lifeCount <= 0) {
+                Greenfoot.stop();
+                lifeCount = 0;
+                score = 10000;
+            }
+        }
 }
     
     

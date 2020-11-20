@@ -14,16 +14,39 @@ public class Hole2 extends Actor
      */
     public void act() 
     {
-     touchHole(); 
+      removeToby(); 
+      
     }   
     
-    public void touchHole() {
-        if(isTouching(Toby.class)) {
+    /**
+     * removeToby() - to remove Toby from the World and bring him back to his initial position in that level.
+     */
+    public void removeToby() {
+        if (isTouching(Toby.class)) {
             removeTouching(Toby.class);
-            // put sound here -> dog cry
-            //getWorld().showText("You lose a life!",360, 370);
-            // do addObject here
-            
+            deductPoints();
+            MyWorld myWorld = (MyWorld)getWorld();
+            if (myWorld.getLifeCount() > 0) {
+                reviveToby();
+            }   
+
         }
+    }
+    /**
+     * deducPoints() - to remove points when Toby touches the traffic cones.
+     */
+     public void deductPoints() {
+        MyWorld myWorld = (MyWorld)getWorld();
+        myWorld.lifeCount(-1);
+
+    }
+
+    /**
+     * reviveToby() - bring back Toby
+     */
+    public void reviveToby() {
+        Level1 myLevel1 = (Level1)getWorld();
+        myLevel1.addObject(new Toby(), 800, 640);
+       
     }
 }

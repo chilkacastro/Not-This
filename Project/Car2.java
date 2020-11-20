@@ -1,4 +1,4 @@
-    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+     import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
     
     /**
      * Write a description of class Car2 here.
@@ -8,49 +8,57 @@
      */
     public class Car2 extends Actor
     {
-      /**
+        /**
          * Act - do whatever the Car2 wants to do. This method is called whenever
          * the 'Act' or 'Run' button gets pressed in the environment.
          */
-        public void act() {
-            move(3);
-            relocateToby();
+         public void act() {
+            move(3);    
+            removeToby();
             if(isAtEdge()) {
                 turn(45);
                 move(20);
                 turn(45);
                 move(-1);
-        
+                
             } 
-
-            
-       }
-      
-      /**
-       * relocateToby() - puts Toby in his initial position in that level.
-       */
-      public void relocateToby() {
-          if (isTouching(Toby.class)) {
-            Greenfoot.playSound("tireSkid.wav");
-            ((MyWorld)getWorld()).lifeCount(-1);
-            ((MyWorld)getWorld()).addScore(-10000);  
-            
-            printText();
-            // put sound here -> dog cry
-            //().showText("You lose a life!",360, 370);
-            // put blood here?? if Toby gets hit by a car
-
-         }     
-         
-     }
+        }
+        
+        /**
+         * removeToby() - to remove Toby from the World and bring him back to his initial position in that level.
+         */
+        public void removeToby() {
+            if (isTouching(Toby.class)) {
+                removeTouching(Toby.class);
+                deductPoints();
+                MyWorld myWorld = (MyWorld)getWorld();
+                if (myWorld.getLifeCount() > 0) {
+                    reviveToby();
+                }   
     
-      /**
-       * printText() - tells that Toby loses a life.
-       */
-     public void printText() {
-         getWorld().showText("You lost a life!", 800, 400);
-     }
+            }
+        }
     
+        /**
+         * deducPoints() - to remove points when Toby touches the traffic cones.
+         */
+         public void deductPoints() {
+            MyWorld myWorld = (MyWorld)getWorld();
+            myWorld.lifeCount(-1);
+    
+        }
+    
+        /**
+         * reviveToby() - bring back Toby
+         */
+        public void reviveToby() {
+            Level1 myLevel1 = (Level1)getWorld();
+            myLevel1.addObject(new Toby(), 800, 640);
+           
+        }
     }
+      
+
+
       
 

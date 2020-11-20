@@ -8,26 +8,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2 extends MyWorld
 {
-
     /**
      * Constructor for objects of class Level2.
      * 
      */
-    public Level2()
-    {
-        setPaintOrder(Train.class, Cactus.class);
+    public Level2() {
+        setPaintOrder(Train.class, Cactus.class, Cactus2.class);
         prepare();
-        super.showScore();
-        super.getScore(0);
-        super.lifeCount(0);
+        showScore();
+        showLife();
+        
     }
 
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
-    {
+    private void prepare() {
         Cactus cactus = new Cactus();
         addObject(cactus,988,482);
         Cactus cactus2 = new Cactus();
@@ -180,9 +177,15 @@ public class Level2 extends MyWorld
         coin11.setLocation(367,380);
         Toby toby3 = new Toby();
         addObject(toby3,800,621);
+        train37.setLocation(1163,296);
+        train5.setLocation(1164,551);
+        removeObject(train5);
+        train23.setLocation(1196,431);
+        removeObject(train23);
+        train37.setLocation(1252,323);
+        removeObject(train37);
+        train38.setLocation(1281,190);
+        removeObject(train38);
     }
- 
-        
-        
-    
+
 }
