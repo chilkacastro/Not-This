@@ -18,6 +18,7 @@ public class Train extends Actor
     public void act() 
     {
         setLocation(getX()-5, getY());
+        //
         Actor Toby = getOneObjectAtOffset(0, 0, Toby.class);
         if(isTouching(Toby.class))
         {
