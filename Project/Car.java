@@ -6,6 +6,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+<<<<<<< HEAD
 public class Car extends Actor {
     private int speed = 5;
         
@@ -66,4 +67,30 @@ public class Car extends Actor {
            
         }
 
+=======
+public class Car extends Actor
+{
+    private int speed;
+    /**
+     * Removes the car when it reaches the edge
+     */
+    public void act() {
+      setLocation(getX()-2, getY());
+      // Removes Toby and plays crying sound while also removing 1 life (life counter to be implemented)
+      if (isTouching(Toby.class)) {
+            World myWorld = getWorld();
+            Level1 level1 = (Level1)myWorld;
+            MyWorld myworld = (MyWorld)myWorld;
+            Counter counter = level1.getCounter();
+            Greenfoot.playSound("tireSkid.wav");
+            counter.minLife();
+            removeTouching(Toby.class);
+            getWorld().showText("You lose a life!",500, 500);
+            Greenfoot.stop();
+        }
+        if(isAtEdge()) {
+             getWorld().removeObject(this);
+      } 
+   } 
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
 }

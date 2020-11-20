@@ -12,12 +12,20 @@ public class Level2 extends MyWorld
      * Constructor for objects of class Level2.
      * 
      */
+<<<<<<< HEAD
     public Level2() {
         setPaintOrder(Train.class, Cactus.class, Cactus2.class);
         prepare();
         showScore();
         showLife();
         
+=======
+    public Level2()
+    {
+        prepare();
+        showScore();
+        loseCondition();
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
     }
 
     /**
@@ -147,6 +155,7 @@ public class Level2 extends MyWorld
         Train3 train38 = new Train3();
         addObject(train38,1417,207);
         Toby toby2 = new Toby();
+<<<<<<< HEAD
         addObject(toby2,759,628);
         toby2.setLocation(754,622);
         removeObject(toby2);
@@ -186,6 +195,9 @@ public class Level2 extends MyWorld
         removeObject(train37);
         train38.setLocation(1281,190);
         removeObject(train38);
+=======
+        addObject(toby2,743,629);
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
     }
 
 }

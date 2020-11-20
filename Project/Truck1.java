@@ -14,10 +14,6 @@ public class Truck1 extends Actor
      */
     public void act() 
     {
-       if(isTouching(Toby.class)) {
-           MyWorld myWorld = (MyWorld)getWorld();
-           myWorld.addScore(-100);
-       }
-        
+        // Add your action code here.
     }    
 }

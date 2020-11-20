@@ -16,6 +16,7 @@ comment4.text=\r\n\ addScore()\ -\ To\ decrease\ or\ increase\ the\ score\ of\ t
 comment5.params=
 comment5.target=void\ showScore()
 comment5.text=\r\n\ showScore()\ -\ To\ print\ the\ score.\r\n
+<<<<<<< HEAD
 comment6.params=lives
 comment6.target=void\ lifeCount(int)
 comment6.text=\r\n\ lifeCount()\ -\ To\ decrease\ or\ increase\ the\ life\ count\ of\ Toby.\r\n
@@ -26,3 +27,6 @@ comment8.params=
 comment8.target=void\ stopGame()
 comment8.text=\r\n\ stopGame()\ -\ To\ stop\ the\ game\ when\ life\ count\ reaches\ to\ 0.\r\n
 numComments=9
+=======
+numComments=6
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673

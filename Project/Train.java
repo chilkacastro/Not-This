@@ -10,11 +10,14 @@ public class Train extends Actor
 {
     
     /**
+     * 
+     * 
      * Act - do whatever the Train wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+<<<<<<< HEAD
         setLocation(getX()-10, getY());
 
         /*if (getX() == 0) {
@@ -29,12 +32,23 @@ public class Train extends Actor
         
         
         /* if(isTouching(Toby.class)) {
+=======
+        setLocation(getX()-5, getY());
+        //
+        Actor Toby = getOneObjectAtOffset(0, 0, Toby.class);
+        if(isTouching(Toby.class))
+        {
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
             Greenfoot.playSound("Train.wav");
             removeTouching(Toby.class);
             getWorld().showText("You lose a life!",500, 500);
             Greenfoot.stop();
+<<<<<<< HEAD
         } */
         
+=======
+        }
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
         if(isAtEdge()) {
             getWorld().removeObject(this);
         } 

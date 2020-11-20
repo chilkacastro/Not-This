@@ -17,8 +17,12 @@ public class Level3 extends MyWorld {
     {
         prepare();
         showScore();
+<<<<<<< HEAD
         showLife();
 
+=======
+        loseCondition();
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
     }
 
     /**
@@ -59,8 +63,5 @@ public class Level3 extends MyWorld {
         addObject(water15,1028,294);
         Water water16 = new Water();
         addObject(water16,1170,182);
-        Toby toby = new Toby();
-        addObject(toby,820,618);
-        toby.setLocation(814,631);
     }
 }
