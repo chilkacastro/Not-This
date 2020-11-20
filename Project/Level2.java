@@ -8,24 +8,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2 extends MyWorld
 {
-
     /**
      * Constructor for objects of class Level2.
      * 
      */
+<<<<<<< HEAD
+    public Level2() {
+        setPaintOrder(Train.class, Cactus.class, Cactus2.class);
+        prepare();
+        showScore();
+        showLife();
+        
+=======
     public Level2()
     {
         prepare();
         showScore();
         loseCondition();
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
     }
 
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
-    {
+    private void prepare() {
         Cactus cactus = new Cactus();
         addObject(cactus,988,482);
         Cactus cactus2 = new Cactus();
@@ -148,10 +155,49 @@ public class Level2 extends MyWorld
         Train3 train38 = new Train3();
         addObject(train38,1417,207);
         Toby toby2 = new Toby();
+<<<<<<< HEAD
+        addObject(toby2,759,628);
+        toby2.setLocation(754,622);
+        removeObject(toby2);
+        KeyPass2 keyPass2 = new KeyPass2();
+        addObject(keyPass2,813,26);
+        Coin coin = new Coin();
+        addObject(coin,365,258);
+        Coin coin2 = new Coin();
+        addObject(coin2,985,383);
+        Coin coin3 = new Coin();
+        addObject(coin3,437,491);
+        Coin coin4 = new Coin();
+        addObject(coin4,1177,141);
+        Coin coin5 = new Coin();
+        addObject(coin5,152,141);
+        Coin coin6 = new Coin();
+        addObject(coin6,981,504);
+        Coin coin7 = new Coin();
+        addObject(coin7,59,495);
+        Coin coin8 = new Coin();
+        addObject(coin8,58,366);
+        Coin coin9 = new Coin();
+        addObject(coin9,614,149);
+        Coin coin10 = new Coin();
+        addObject(coin10,1055,146);
+        Coin coin11 = new Coin();
+        addObject(coin11,374,432);
+        coin11.setLocation(367,380);
+        Toby toby3 = new Toby();
+        addObject(toby3,800,621);
+        train37.setLocation(1163,296);
+        train5.setLocation(1164,551);
+        removeObject(train5);
+        train23.setLocation(1196,431);
+        removeObject(train23);
+        train37.setLocation(1252,323);
+        removeObject(train37);
+        train38.setLocation(1281,190);
+        removeObject(train38);
+=======
         addObject(toby2,743,629);
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
     }
- 
-        
-        
-    
+
 }

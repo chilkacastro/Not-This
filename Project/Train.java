@@ -17,16 +17,38 @@ public class Train extends Actor
      */
     public void act() 
     {
+<<<<<<< HEAD
+        setLocation(getX()-10, getY());
+
+        /*if (getX() == 0) {
+            getWorld().removeObject(this);
+            
+        } */
+        
+        /* if(isTouching(Toby.class)) {
+            Greenfoot.playSound("Train.wav");
+            */
+            Actor Toby = getOneObjectAtOffset(0, 0, Toby.class);
+        
+        
+        /* if(isTouching(Toby.class)) {
+=======
         setLocation(getX()-5, getY());
         //
         Actor Toby = getOneObjectAtOffset(0, 0, Toby.class);
         if(isTouching(Toby.class))
         {
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
             Greenfoot.playSound("Train.wav");
             removeTouching(Toby.class);
             getWorld().showText("You lose a life!",500, 500);
             Greenfoot.stop();
+<<<<<<< HEAD
+        } */
+        
+=======
         }
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
         if(isAtEdge()) {
             getWorld().removeObject(this);
         } 

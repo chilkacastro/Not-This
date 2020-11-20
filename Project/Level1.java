@@ -6,6 +6,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+<<<<<<< HEAD
+public class Level1 extends MyWorld {
+        /**
+         * Constructor for objects of class Level1.
+         * 
+         */
+        public Level1() {
+            setPaintOrder(Car.class, Bench.class, TrafficCone.class, Car2.class, Toby.class);
+            prepare();
+            showLife();
+            showScore();
+            
+        }
+
+=======
 public class Level1 extends MyWorld 
 {
     protected Counter counter =  new  Counter();
@@ -29,6 +44,7 @@ public class Level1 extends MyWorld
         return counter;
     }
     
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -352,5 +368,27 @@ public class Level1 extends MyWorld
         trafficCone54.setLocation(483,359);
         removeObject(trafficCone2);
         addObject(counter,1503,24);
+        counter.setLocation(1506,23);
+        counter.setLocation(1513,20);
+        removeObject(counter);
+
+        bench9.setLocation(1126,255);
+        bench9.setLocation(1126,255);
+        car214.setLocation(135,70);
+        trafficCone57.setLocation(128,24);
+        trafficCone56.setLocation(157,23);
+        trafficCone55.setLocation(101,26);
+        Car2 car216 = new Car2();
+        addObject(car216,908,548);
+        Car2 car217 = new Car2();
+        addObject(car217,309,552);
+        Car2 car218 = new Car2();
+        addObject(car218,645,551);
+        Car2 car219 = new Car2();
+        addObject(car219,1469,550);
+        Car2 car220 = new Car2();
+        addObject(car220,1264,63);
+        Car2 car221 = new Car2();
+        addObject(car221,445,63);
     }
 }

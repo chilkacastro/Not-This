@@ -14,5 +14,10 @@ comment4.params=
 comment4.target=void\ slowDown()
 comment4.text=\r\n\ slowDown\ -\ to\ slow\ down\ Toby's\ movement.\r\n
 comment5.params=
+<<<<<<< HEAD
+comment5.target=void\ slowDown()
+comment5.text=\r\n\ slowDown\ -\ to\ slow\ down\ Toby's\ movement.\r\n
+=======
 comment5.target=void\ deductPoints()
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
 numComments=6

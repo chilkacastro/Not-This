@@ -5,14 +5,28 @@ comment1.params=
 comment1.target=MyWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
 comment2.params=
-comment2.target=Counter\ getCounter()
-comment2.text=\r\n\ Returns\ the\ life\ counter\r\n
+comment2.target=int\ getScore()
+comment2.text=\r\n\ getScore()\ -\ To\ allow\ the\ actor\ classes\ to\ access\ the\ score.\r\n
 comment3.params=
-comment3.target=void\ loseCondition()
+comment3.target=int\ getLifeCount()
+comment3.text=\r\n\ getLifeCount()\ -\ To\ allow\ the\ actor\ classes\ to\ access\ the\ lifeCount.\r\n
 comment4.params=points
 comment4.target=void\ addScore(int)
-comment4.text=\r\n\ addScore()\ -\ To\ show\ the\ score\ of\ the\ player.\r\n
+comment4.text=\r\n\ addScore()\ -\ To\ decrease\ or\ increase\ the\ score\ of\ the\ player.\r\n
 comment5.params=
 comment5.target=void\ showScore()
 comment5.text=\r\n\ showScore()\ -\ To\ print\ the\ score.\r\n
+<<<<<<< HEAD
+comment6.params=lives
+comment6.target=void\ lifeCount(int)
+comment6.text=\r\n\ lifeCount()\ -\ To\ decrease\ or\ increase\ the\ life\ count\ of\ Toby.\r\n
+comment7.params=
+comment7.target=void\ showLife()
+comment7.text=\r\n\ showLife()\ -\ To\ show\ how\ many\ lives\ does\ Toby\ has\ and\ if\ player\ lost.\r\n
+comment8.params=
+comment8.target=void\ stopGame()
+comment8.text=\r\n\ stopGame()\ -\ To\ stop\ the\ game\ when\ life\ count\ reaches\ to\ 0.\r\n
+numComments=9
+=======
 numComments=6
+>>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
