@@ -12,20 +12,18 @@
          * Act - do whatever the Car2 wants to do. This method is called whenever
          * the 'Act' or 'Run' button gets pressed in the environment.
          */
-<<<<<<< HEAD
+
          public void act() {
             move(3);    
             removeToby();
-=======
+
         public void act() {
             move(3);
->>>>>>> d00ab9526adbc520d6367d7d63905e611f1aa673
             if(isAtEdge()) {
                 turn(45);
                 move(20);
                 turn(45);
                 move(-1);
-<<<<<<< HEAD
                 
             } 
         }
